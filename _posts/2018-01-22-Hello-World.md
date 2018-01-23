@@ -51,6 +51,7 @@ Using this information, and the information we obtained from scrubbing the data 
 
 After we had the stations narrowed down using the union of the heatmap and the high volume stations, we wanted to make a more granular recommendation to our client.  We specifically set out to look at the data set at a volume by day level.  Ultimately this analysis led us to the conclusion that our client should focus their canvassing efforts on Wednesdays and Thursdays in order to maximize exposure to their target audience.
 
+![Our Recommendations](/images/week-day-recs.png){:  .center-image}
 ---
 
 **Things I found interesting**
