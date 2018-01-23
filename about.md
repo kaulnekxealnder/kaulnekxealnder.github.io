@@ -3,8 +3,15 @@ layout: page
 title: About
 permalink: /about/
 ---
-*Polar Bear* is a lightweight and customisable Jekyll Theme.
+Currently a student at Metis in Chicago where I started the Data Science program in January 2018.  
 
-* Author: Camille Diez
-* Github: http://github.com/diezcami
-* Portfolio: http://diezcami.github.io
+Previously an equity options trader at Simplex Investments.
+
+I graduated from the University of Michigan's Ross School of Business in 2010 with a BBA and also a BGS
+from the University of Michigan LSA with a focus in Economics.
+
+Born and raised in Michigan, moved to Chicago after college to start a job at JPMorgan Chase & Company.
+
+### Contact me
+
+[alex.d.kunkel@gmail.com](mailto:email@domain.com)
