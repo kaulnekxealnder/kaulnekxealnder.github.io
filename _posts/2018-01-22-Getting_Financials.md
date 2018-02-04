@@ -90,7 +90,7 @@ The following works with Alpha Vantage to get symbol Technical Indicator informa
 ```python
 # Getting bollinger bands - there are numerous techinical indicators available
 
-symbols_list = ['AAPL', 'UPS', 'PG', 'JPM', 'WMT', 'XOM', 'VZ', 'ABBV', 'NEE', 'SLB', 'SPY']
+symbols_list = ['AAPL', 'UPS', 'PG', 'JPM', 'WMT', 'XOM', 'VZ', 'ABBV', 'NEE', 'SLB', 'SPY'] # random list
 
 for symbol in symbols_list:
     ti = TechIndicators(key='YOUR API KEY', retries=1000, output_format='pandas')
@@ -103,7 +103,7 @@ for symbol in symbols_list:
 The following works with Alpha Vantage to get symbol TimeSeries information.  I read that they supported retries up to 1000, and again you can pick your output format.  I simply was iterating through and saving the files as the ticker name and a csv extension.  You can only request `full` or `partial` ranges.  Full is all the data that they have as far back as they stored it.
 
 ```python
-ticker = 'BRKB'
+ticker = 'SPY'
 ts = TimeSeries(key='YOUR API KEY', retries=1000, output_format='pandas')
 data, metadata = ts.get_daily(symbol=ticker, outputsize='full') # full or partial
 sleep(10) # not to hammer the api
