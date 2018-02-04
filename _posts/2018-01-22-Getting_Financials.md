@@ -33,7 +33,7 @@ for ticker in tickers_list['Symbol'].values
     for i in range(retries):
         try:
             my_ticker = str(ticker)
-            ticker = data.DataReader(ticker, "yahoo", start, end)
+            ticker = data.DataReader(ticker, "yahoo", start, end) # here is where you pick the source
             ticker.to_csv("alt_data/"+my_ticker+".csv", header=True)
         except:
             missed.append(ticker)
