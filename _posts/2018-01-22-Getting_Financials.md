@@ -36,12 +36,15 @@ def returnNoMatches(a, b):
 stock_change = stocks.apply(lambda x: np.log(x) - np.log(x.shift(1))) # shift moves dates back by 1.
 df = df[(df['date'] > "2015-12-31") & (df['date'] <= "2018-01-25")]
 ```
-To illustrate the types of information you can access with the `pandas_datareader`.  I was looking for lognormal returns so the stock_change applied a lambda function to my dataframe to get my returns in the desired format.  The df simply ensures that I am looking at my data in the desired time frame.
+ I was looking for lognormal returns so the stock_change applied a lambda function to my dataframe to get my returns in the desired format.  The df simply ensures that I am looking at my data in the desired time frame.
 ```python
 print(dir(data), end=' ')
 ```
-*returns*
+To illustrate the types of information you can access with the `pandas_datareader` see below for what the `dir` call returns.
+
 `['DataReader', 'EdgarIndexReader', 'EnigmaReader', 'EurostatReader', 'FamaFrenchReader', 'FredReader', 'GoogleDailyReader', 'GoogleOptions', 'GoogleQuotesReader', 'OECDReader', 'Options', 'QuandlReader', 'YahooActionReader', 'YahooDailyReader', 'YahooDivReader', 'YahooOptions', 'YahooQuotesReader', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'get_components_yahoo', 'get_data_enigma', 'get_data_famafrench', 'get_data_fred', 'get_data_google', 'get_data_quandl', 'get_data_yahoo', 'get_data_yahoo_actions', 'get_nasdaq_symbols', 'get_quote_google', 'get_quote_yahoo', 'warnings'] `
+
+Ultimately, I like the versatility that pandas data_reader gives you access to.  There are plenty of things I haven't yet explored, but I am excited to use this resource again in the future.
 
 # Quandl
 Next lets take a look at Quandl.  Ultimately, I found their API to be very useful in getting my desired data in an easy to use format.  From a high level, I was getting adjusted information and all of the other usefull stuff in a single call.
@@ -53,6 +56,7 @@ quandl.ApiConfig.api_key = 'YOUR API KEY'
 df = quandl.get('WIKI/'+ticker+'') # WIKI was the database I was getting my information from
 ```
 This call would return the following ticker information:
+
 `Open	High	Low	Close	Volume	Ex-Dividend	Split Ratio	Adj. Open	Adj. High	Adj. Low	Adj. Close	Adj. Volume`
 
 ```python 
@@ -97,3 +101,7 @@ sleep(10) # not to hammer the api
 save_name = 'stock_data/%s.csv' % ticker # making it easy to iterate
 data.to_csv(save_name)
 print('Pulled: ', ticker) # just printing for simplicity and monitoring
+```
+
+# Conclusion
+I wish I had more time to play around with each of these individually.  Given some more time in the future I will certainly figure out what other useful information I can query using these resources.  Sadly the yahoo finance and google finance APIs are both unusable at the time of writing this post.  You can still get their information though using pandas data_reader and specifiying `yahoo` or `google` as the target.
