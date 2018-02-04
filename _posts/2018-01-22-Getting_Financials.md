@@ -5,13 +5,16 @@ I tried to write my own scripts to scrape from Yahoo Finance.  I tried to access
 I was able to find success with three different resources:
 1. [Alpha Vantage](https://www.alphavantage.co/)
 ```python
-!pip install alpha_vantage```
+pip install alpha_vantage
+```
 2. [Quandl](https://www.quandl.com/)
 ```python
-!pip install quandl```
+pip install quandl
+```
 3. [pandas_datareader](https://pandas-datareader.readthedocs.io/en/latest/)
 ```python
-!pip install pandas_datareader```
+pip install pandas_datareader
+```
 
 Each of these sources has positives and negatives.  The first two require you to set up an account to get a free API Key.
 These two both have decent documentation on how to use their resources.  Problematically, some of the data you are looking for will be accessible with your free API key, while other data is pay to access.  Depending on your individual needs, this may do.  I was specifically looking for adjusted close data on US Equity Securities.  All of these sources allowed me to get that in some kind of format.
