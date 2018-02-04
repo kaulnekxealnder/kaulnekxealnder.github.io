@@ -1,3 +1,5 @@
+# So You Need Some Financial Data
+
 Allow me to start with a caveat.  I tried many things to get financial data.
 
 I tried to write my own scripts to scrape from Yahoo Finance.  I tried to access Yahoo Finance's API along with Google Finance's API.  This post is going to focus on the things that I was able to successfuly use when looking to scrape financial data for US Listed Equity Secruities.
